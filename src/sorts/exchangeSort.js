@@ -6,7 +6,7 @@ export default async () => {
 	console.log(array);
 	for (let i = 0; i < array.length; i++) {
 		for (let j = 0; j < i; j++) {
-			if (array[i] < array[j]) {
+			if (parseInt(array[i]) < parseInt(array[j])) {
 				const element = array[i];
 				array[i] = array[j];
 				array[j] = element;
