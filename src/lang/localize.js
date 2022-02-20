@@ -1,16 +1,16 @@
 import localization from './localization.js';
 
-const inputSectionLabel = document.querySelector('.input-section__label');
-const btnExchangeSort = document.getElementById('btnExchangeSort');
-const btnSelectionSort = document.getElementById('btnSelectionSort');
-const btnBubbleSort = document.getElementById('btnBubbleSort');
-const btnInsertionSort = document.getElementById('btnInsertionSort');
+const DOMelements = {
+	inputSectionLabel: document.querySelector('.input-section__label'),
+	btnExchangeSort: document.getElementById('btnExchangeSort'),
+	btnSelectionSort: document.getElementById('btnSelectionSort'),
+	btnBubbleSort: document.getElementById('btnBubbleSort'),
+	btnInsertionSort: document.getElementById('btnInsertionSort'),
+	statsMovementsCounterLabel: document.getElementById('stats__movements-counter-label'),
+};
 
 export default (lang) => {
-	console.log(localization);
-	inputSectionLabel.textContent = localization[lang].inputSectionLabel;
-	btnExchangeSort.textContent = localization[lang].btnExchangeSort;
-	btnSelectionSort.textContent = localization[lang].btnSelectionSort;
-	btnBubbleSort.textContent = localization[lang].btnBubbleSort;
-	btnInsertionSort.textContent = localization[lang].btnInsertionSort;
+	for (const [key, value] of Object.entries(DOMelements)) {
+		value.textContent = localization[lang][key];
+	}
 };
