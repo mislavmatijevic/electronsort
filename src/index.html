@@ -8,18 +8,28 @@
 		<script defer src="./render.js" type="module"></script>
 	</head>
 	<body>
+		<button id="language-selection">🇭🇷</button>
+
 		<section class="input-section">
-			<label class="input-section__label" for="elements-input">Unesite elemente:</label>
+			<label class="input-section__label" for="elements-input"></label>
 			<input class="input-section__input" id="elements-input" type="text" placeholder="8 4 1 2" />
 		</section>
 
 		<hr />
 
 		<section class="sort-section">
-			<button class="sort-section__button" id="btnExchangeSort">Sortiranje zamjenom ↪️</button>
-			<button class="sort-section__button" id="btnSelectionSort">Sortiranje izborom ➡️</button>
-			<button class="sort-section__button" id="btnBubbleSort">Mjehuričasto sortiranje 🔄</button>
-			<button class="sort-section__button" id="btnInsertionSort">Sortiranje umetanjem ⤴️</button>
+			<button class="sort-section__button" id="btnExchangeSort">
+				<span class="sort-section__button-text"></span><span>↪️</span>
+			</button>
+			<button class="sort-section__button" id="btnSelectionSort">
+				<span class="sort-section__button-text"></span><span>➡️</span>
+			</button>
+			<button class="sort-section__button" id="btnBubbleSort">
+				<span class="sort-section__button-text"></span><span>🔄</span>
+			</button>
+			<button class="sort-section__button" id="btnInsertionSort">
+				<span class="sort-section__button-text"></span><span>⤴️</span>
+			</button>
 		</section>
 
 		<hr />
