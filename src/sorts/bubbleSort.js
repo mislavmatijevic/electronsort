@@ -7,7 +7,7 @@ export default async () => {
 	while (true) {
 		let changed = false;
 		for (let j = 0; j < array.length - 1; j++) {
-			if (array[j] > array[j + 1]) {
+			if (parseInt(array[j]) > parseInt(array[j + 1])) {
 				let pom = array[j];
 				array[j] = array[j + 1];
 				array[j + 1] = pom;

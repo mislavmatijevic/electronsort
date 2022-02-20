@@ -7,7 +7,7 @@ export default async () => {
 	for (let i = 1; i < array.length; i++) {
 		let j = i - 1;
 		let pom = array[i];
-		while (j >= 0 && array[j] > pom) {
+		while (j >= 0 && parseInt(array[j]) > parseInt(pom)) {
 			array[j + 1] = array[j];
 			sortMovements.push(`${j}->${j + 1}`);
 			j--;

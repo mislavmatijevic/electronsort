@@ -7,7 +7,7 @@ export default async () => {
 	for (let i = array.length - 1; i > 0; i--) {
 		let max = 0;
 		for (let j = 1; j <= i; j++) {
-			if (array[j] > array[max]) {
+			if (parseInt(array[j]) > parseInt(array[max])) {
 				max = j;
 			}
 			if (max != i) {
