@@ -7,16 +7,26 @@ import insertionSort from './sorts/insertionSort.js';
 import selectionSort from './sorts/selectionSort.js';
 
 // DOM elements
-const elementsNumber = document.getElementById('elements-input');
+const elementsInput = document.getElementById('elements-input');
 const btnExchangeSort = document.getElementById('btnExchangeSort');
 const btnSelectionSort = document.getElementById('btnSelectionSort');
 const btnBubbleSort = document.getElementById('btnBubbleSort');
 const btnInsertionSort = document.getElementById('btnInsertionSort');
 
 // Event handlers
-elementsNumber.oninput = () => addElements(elementsNumber.value.split(' '));
+elementsInput.oninput = () => repopulateArray();
 
-btnExchangeSort.onclick = () => exchangeSort();
-btnSelectionSort.onclick = () => selectionSort();
-btnBubbleSort.onclick = () => bubbleSort();
-btnInsertionSort.onclick = () => insertionSort();
+btnExchangeSort.onclick = () => performSort(exchangeSort);
+btnSelectionSort.onclick = () => performSort(selectionSort);
+btnBubbleSort.onclick = () => performSort(bubbleSort);
+btnInsertionSort.onclick = () => performSort(insertionSort);
+
+// Functions
+function repopulateArray() {
+	addElements(elementsInput.value.split(' '));
+}
+
+function performSort(sortCallback) {
+	repopulateArray();
+	sortCallback();
+}
