@@ -1,23 +1,19 @@
-import { array } from '../context/elements.js';
-import drawMoves from '../DOM/drawMoves.js';
+import sortExecutor from './sortExecutor.js';
 
-export default async () => {
-	const sortMovements = new Array();
-	console.log(array);
-	for (let i = array.length - 1; i > 0; i--) {
-		let max = 0;
-		for (let j = 1; j <= i; j++) {
-			if (parseInt(array[j]) > parseInt(array[max])) {
-				max = j;
+export default () =>
+	sortExecutor((array, sortMovements) => {
+		for (let i = array.length - 1; i > 0; i--) {
+			let max = 0;
+			for (let j = 1; j <= i; j++) {
+				if (parseInt(array[j]) >= parseInt(array[max])) {
+					max = j;
+				}
 			}
-			if (max != i) {
-				let pom = array[i];
+			if (max !== i) {
+				const previousMax = array[i];
 				array[i] = array[max];
-				array[max] = pom;
+				array[max] = previousMax;
 				sortMovements.push(`${i}->${max}`);
 			}
 		}
-	}
-
-	drawMoves(sortMovements);
-};
+	});
