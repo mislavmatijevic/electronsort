@@ -8,15 +8,22 @@
 		<script defer src="./render.js" type="module"></script>
 	</head>
 	<body>
-		<label for="elements-input">Unesite elemente:</label>
-		<input id="elements-input" type="text" placeholder="8 4 1 2" />
-		<button id="btnExchangeSort">Sortiranje zamjenom</button>
-		<button id="btnSelectionSort">Sortiranje izborom</button>
-		<button id="btnBubbleSort">Mjehuričasto sortiranje</button>
-		<button id="btnInsertionSort">Sortiranje umetanjem</button>
+		<section class="input-section">
+			<label class="input-section__label" for="elements-input">Unesite elemente:</label>
+			<input class="input-section__input" id="elements-input" type="text" placeholder="8 4 1 2" />
+		</section>
 
 		<hr />
 
-		<div class="section"></div>
+		<section class="sort-section">
+			<button class="sort-section__button" id="btnExchangeSort">Sortiranje zamjenom ↪️</button>
+			<button class="sort-section__button" id="btnSelectionSort">Sortiranje izborom ➡️</button>
+			<button class="sort-section__button" id="btnBubbleSort">Mjehuričasto sortiranje 🔄</button>
+			<button class="sort-section__button" id="btnInsertionSort">Sortiranje umetanjem ⤴️</button>
+		</section>
+
+		<hr />
+
+		<div class="section-elements"></div>
 	</body>
 </html>

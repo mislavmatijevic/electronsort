@@ -1,4 +1,4 @@
-const section = document.querySelector('.section');
+const section = document.querySelector('.section-elements');
 
 export default (array) => {
 	section.innerHTML = '';
@@ -6,7 +6,7 @@ export default (array) => {
 	array.forEach((element, index) => {
 		section.innerHTML += `
                 <div id='section-circle-${index}'
-                    class='section-circle'
+                    class='section-elements__circle'
                     style='transform: translateX(${index * 60}px)'>
                     <div>${element}</div>
                 </div>

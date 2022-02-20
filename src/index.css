@@ -6,17 +6,67 @@ body {
   padding: 2rem;
 }
 
-.section-circle {
+.input-section__label {
+  font-size: larger;
+}
+
+.input-section__input {
+  font-size: larger;
+
+  border-style: none;
+  border-bottom: 1px solid grey;
+
+  outline: 1px;
+}
+
+.section-elements {
+  display: flex;
+}
+
+.section-elements__circle {
   position: absolute;
   width: 50px;
   height: 50px;
+  border-radius: 50%;
+
+  background-color: black;
+  color: white;
+
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: black;
-  color: white;
-  border-radius: 50%;
+
+  user-select: none;
+
   text-align: center;
   font-size: xx-large;
+
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.sort-section {
+  display: flex;
+  gap: 10px;
+}
+
+.sort-section__button {
+  width: 175px;
+  border-radius: 5px;
+
+  background-color: whitesmoke;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+  font-size: large;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.sort-section__button:hover {
+  width: 200px;
+  background-color: aliceblue;
+}
+
+.sort-section__button:focus {
+  width: 200px;
+  background-color: honeydew;
+  color: black;
 }
