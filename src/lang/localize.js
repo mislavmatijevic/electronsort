@@ -6,7 +6,7 @@ const DOMelements = {
 	btnSelectionSort: document.getElementById('btnSelectionSort'),
 	btnBubbleSort: document.getElementById('btnBubbleSort'),
 	btnInsertionSort: document.getElementById('btnInsertionSort'),
-	statsMovementsCounterLabel: document.getElementById('stats__movements-counter-label'),
+	statsMovementsCounterLabel: document.querySelector('.stats__movements-counter-label'),
 };
 
 export default (lang) => {

@@ -1,5 +1,7 @@
 import { array } from '../context/elements.js';
 
+const statCounter = document.querySelector('.stats__movements-counter');
+
 const performMove = (position1, position2) =>
 	new Promise((resolve, reject) =>
 		setTimeout(() => {
@@ -28,10 +30,11 @@ const performMove = (position1, position2) =>
 	);
 
 export default async (sortMovements) => {
+	let counter = 1;
 	for (const movePair of sortMovements) {
 		const positions = movePair.split('->');
-		console.log(movePair);
 		await performMove(positions[0], positions[1]);
+		statCounter.textContent = counter++;
 	}
 
 	for (const index in array) {

@@ -28,14 +28,20 @@ body {
   outline: 1px;
 }
 
+.stats {
+  position: relative;
+  top: 100px;
+}
+
 .section-elements {
   display: flex;
 }
 
 .section-elements__circle {
-  position: absolute;
+  position: fixed;
   width: 50px;
   height: 50px;
+  top: 150px;
   border-radius: 50%;
 
   background-color: black;

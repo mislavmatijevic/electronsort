@@ -5,12 +5,14 @@ export default {
 		btnSelectionSort: 'Selection Sort',
 		btnBubbleSort: 'Bubble Sort',
 		btnInsertionSort: 'Insertion Sort',
+		statsMovementsCounterLabel: 'Movement counter:',
 	},
 	hr: {
 		inputSectionLabel: 'Unesite elemente:',
-		btnExchangeSort: 'Sortiranje zamjenom',
-		btnSelectionSort: 'Sortiranje izborom',
-		btnBubbleSort: 'Mjehuričasto sortiranje',
-		btnInsertionSort: 'Sortiranje umetanjem',
+		btnExchangeSort: 'Zamjenom',
+		btnSelectionSort: 'Izborom',
+		btnBubbleSort: 'Mjehuričasto',
+		btnInsertionSort: 'Umetanjem',
+		statsMovementsCounterLabel: 'Brojač pomaka:',
 	},
 };

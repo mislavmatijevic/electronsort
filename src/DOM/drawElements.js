@@ -1,7 +1,9 @@
 const section = document.querySelector('.section-elements');
+const statCounter = document.querySelector('.stats__movements-counter');
 
 export default (array) => {
 	section.innerHTML = '';
+	statCounter.textContent = 0;
 
 	array.forEach((element, index) => {
 		section.innerHTML += `
